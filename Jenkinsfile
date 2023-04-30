@@ -1,5 +1,9 @@
 pipeline {
-    agent none
+    agent {
+        node {
+            label "py37"
+        }
+    }
     stages {
         stage('Build') {
             agent {
